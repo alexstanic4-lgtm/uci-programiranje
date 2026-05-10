@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uči Programiranje</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Uči Programiranje od Početka</h1>
+        <nav>
+            <a href="#intro">Uvod</a>
+            <a href="#variables">Varijable</a>
+            <a href="#conditions">Uvjeti</a>
+            <a href="#loops">Petlje</a>
+            <a href="#arrays">Nizovi</a>
+            <a href="#functions">Funkcije</a>
+            <a href="#objects">Objekti</a>
+            <a href="#quiz">Kviz</a>
+        </nav>
+    </header>
+    <main>
+        <section id="intro">
+            <h2>Uvod u Programiranje</h2>
+            <p>Programiranje je pisanje instrukcija za računalo. Koristimo jezike kao JavaScript.</p>
+            <pre><code>console.log("Zdravo, svijete!");</code></pre>
+        </section>
+        <section id="variables">
+            <h2>Varijable</h2>
+            <p>Varijable spremaju podatke. Koristimo let ili const.</p>
+            <pre><code>let ime = "Ana";
+const godine = 16;
+console.log(ime + " ima " + godine + " godina.");</code></pre>
+        </section>
+        <section id="conditions">
+            <h2>Uvjeti (If-Else)</h2>
+            <p>Uvjeti provjeravaju istinitost i izvršavaju kod.</p>
+            <pre><code>let broj = 10;
+if (broj > 5) {
+    console.log("Broj je veći od 5");
+} else {
+    console.log("Broj je manji ili jednak 5");
+}</code></pre>
+        </section>
+        <section id="loops">
+            <h2>Petlje</h2>
+            <p>Petlje ponavljaju kod. For petlja za poznati broj ponavljanja.</p>
+            <pre><code>for (let i = 0; i < 5; i++) {
+    console.log("Broj: " + i);
+}</code></pre>
+        </section>
+        <section id="arrays">
+            <h2>Nizovi (Arrays)</h2>
+            <p>Nizovi spremaju više vrijednosti.</p>
+            <pre><code>let boje = ["crvena", "plava", "zelena"];
+console.log(boje[0]); // crvena
+boje.push("žuta");
+console.log(boje.length); // 4</code></pre>
+        </section>
+        <section id="functions">
+            <h2>Funkcije</h2>
+            <p>Funkcije su blokovi koda koji se mogu pozvati više puta.</p>
+            <pre><code>function pozdrav(ime) {
+    return "Zdravo, " + ime + "!";
+}
+console.log(pozdrav("Marko"));</code></pre>
+        </section>
+        <section id="objects">
+            <h2>Objekti</h2>
+            <p>Objekti spremaju podatke u svojstvima.</p>
+            <pre><code>let ucenik = {
+    ime: "Ana",
+    godine: 16,
+    razred: "8.b"
+};
+console.log(ucenik.ime); // Ana</code></pre>
+        </section>
+        <section id="quiz">
+            <h2>Kviz</h2>
+            <div class="question">
+                <p>1. Što će ispisati ovaj kod?</p>
+                <pre><code>let x = 5; x += 3; console.log(x);</code></pre>
+                <button onclick="checkAnswer(1, 8)">8</button>
+                <button onclick="checkAnswer(1, 5)">5</button>
+                <button onclick="checkAnswer(1, 3)">3</button>
+                <p id="result1"></p>
+            </div>
+            <div class="question">
+                <p>2. Koja petlja se koristi za poznati broj ponavljanja?</p>
+                <button onclick="checkAnswer(2, 'for')">for</button>
+                <button onclick="checkAnswer(2, 'while')">while</button>
+                <button onclick="checkAnswer(2, 'if')">if</button>
+                <p id="result2"></p>
+            </div>
+            <div class="question">
+                <p>3. Kako pristupiti prvom elementu niza boje?</p>
+                <button onclick="checkAnswer(3, 'boje[0]')">boje[0]</button>
+                <button onclick="checkAnswer(3, 'boje[1]')">boje[1]</button>
+                <button onclick="checkAnswer(3, 'boje.first')">boje.first</button>
+                <p id="result3"></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Uči Programiranje</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
